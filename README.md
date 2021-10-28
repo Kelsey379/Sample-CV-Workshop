@@ -1,4 +1,5 @@
 Simple Python face detection program:
-- Includes photoDetection.py for simple face detection in an image
-- The videoDetectionfile is used to detect faces either through video or webcam input
+- Includes a photoDetection file for simple face detection in an image (best for complete beginners)
+- The videoDetection file is used to detect faces through video or webcam input
+
 
