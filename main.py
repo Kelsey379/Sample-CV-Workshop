@@ -1,5 +1,4 @@
 import cv2
-count = 0
 # Load the cascade (For this workshop we're using a premade Haar cascade)
 face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
 # Read the input image
@@ -11,8 +10,6 @@ faces = face_cascade.detectMultiScale(gray, 1.1, 4)
 # Draw rectangle around the faces
 for (x, y, w, h) in faces:
     cv2.rectangle(img, (x, y), (x+w, y+h), (255, 0, 0), 2)
-    count = count+1
 # Display the output (change to save image results later)
 cv2.imshow('img', img)
 cv2.waitKey(0)
-print("There are " + count + "faces")
