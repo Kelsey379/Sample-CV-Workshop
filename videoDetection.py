@@ -3,7 +3,7 @@ import cv2
 face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
 # take input from the webcam
 videoInput = cv2.VideoCapture(0)
-# or, take input from a video:
+# Use this next line to take input from a video:
 # cap = cv2.VideoCapture('sampleVideo.mp4')
 
 while True:
@@ -13,7 +13,7 @@ while True:
     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
     # use the Haar cascade to detect the faces
 
-    faces = face_cascade.detectMultiScale(gray, 1.1, 4)
+    faces = face_cascade.detectMultiScale(gray, 1.1, 5)
     # The detectMultiscale function takes 3 parameters: input image, scaleFactor and minNeighbours.
         # scaleFactor specifies how much the image size is reduced with each scale. 
         # minNeighbours specifies how many neighbors each candidate rectangle should have to retain it.
